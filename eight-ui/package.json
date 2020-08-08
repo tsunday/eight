@@ -1,0 +1,26 @@
+{
+  "name": "eight-ui",
+  "version": "1.0.0",
+  "description": "Eight - cloud backpack for your business",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsunday/eight.git"
+  },
+  "keywords": [
+    "rwd",
+    "pwa",
+    "rest",
+    "ml",
+    "bi"
+  ],
+  "author": "tnb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tsunday/eight/issues"
+  },
+  "homepage": "https://github.com/tsunday/eight#readme"
+}
