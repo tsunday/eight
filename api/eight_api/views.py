@@ -16,10 +16,15 @@ def items_list():
     ))
 
 
-@items.route('/<id>', methods=['GET'])
+@items.route('/<id>/', methods=['GET'])
 def items_detail(id):
     item = Item.query.filter_by(id=id).first()
-    return jsonify(item)
+    if not item:
+        return Response(status=404)
+    return jsonify({
+        'name': item.name,
+        'description': item.description
+    })
 
 
 @items.route('/', methods=['POST'])
