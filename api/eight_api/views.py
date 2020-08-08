@@ -8,7 +8,12 @@ items = Blueprint('users', __name__, url_prefix='/items')
 @items.route('/', methods=['GET'])
 def items_list():
     items = Item.query.all()
-    return jsonify(items)
+    return jsonify(list(
+        map(lambda item: {
+            'name': item.name,
+            'description': item.description
+        }, items)
+    ))
 
 
 @items.route('/<id>', methods=['GET'])
