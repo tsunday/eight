@@ -9,15 +9,13 @@ class App extends React.Component {
   componentDidMount() {
     fetch("http://localhost:5000/items/")
       .then(res => res.json())
-      .then(json => this.setState(json))
+      .then(json => this.setState({items: json}))
   }
 
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          Eight UI
-        </header>
+        <h1>Eight UI</h1>
         <ul>
           {this.state.items.map((item) =>
             <li key={item.id}>

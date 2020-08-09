@@ -10,6 +10,7 @@ def items_list():
     items = Item.query.all()
     return jsonify(list(
         map(lambda item: {
+            'id': item.id,
             'name': item.name,
             'description': item.description
         }, items)
@@ -22,6 +23,7 @@ def items_detail(id):
     if not item:
         return Response(status=404)
     return jsonify({
+        'id': item.id,
         'name': item.name,
         'description': item.description
     })
